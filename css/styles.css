@@ -35,9 +35,11 @@ header {
 
 header nav {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 150px;
     padding: 15px 25px;
+    border: 1px solid red;
 }
 
 header ul {
@@ -51,11 +53,10 @@ header a {
     text-decoration: none;
     color: var(--light-shade);
     font-size: 18px;
+    gap: 5px;
 }
 
 header ul a:hover {
-    padding-bottom: 4px;
-    border-bottom: 2px solid var(--light-shade);
     transition: all 100ms ease-in-out;
     font-weight: bold;
 }
@@ -84,7 +85,7 @@ header #logo {
 }
 
 .featured-recipe .text {
-        margin: 120px 50px;
+    margin: 120px 50px;
 }
 
 .featured-recipe .text h1 {
