@@ -34,6 +34,7 @@ HTML
     - ingredients
     - instructions
     - author
+- about.html
 
 
 
