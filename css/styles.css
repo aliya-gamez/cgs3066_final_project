@@ -148,6 +148,20 @@ header #logo {
     box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.26), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
+.recipes .recipe-list .recipe-img:hover {
+    animation: shake 250ms;
+    transform: scale(1.03) rotate(.5deg);
+}
+
+@keyframes shake {
+    0% { transform: scale(1.0) rotate(0deg);}
+    33% { transform: scale(1.01) rotate(1deg);}
+    66% { transform: scale(1.02) rotate(-1deg);}
+    100% { transform: scale(1.03) rotate(.5deg);}
+}
+
+
+
 .recipes .recipe-list .recipe-text {
     padding: 2em .3em;
 }
@@ -156,7 +170,11 @@ header #logo {
     margin-bottom: .5em;
     color: var(--main-color);
     font-weight: 400;
-    font-size: 16px
+    font-size: 16px;
+}
+
+.recipes .recipe-list .recipe-text p {
+    font-size: 16px;
 }
 
 
