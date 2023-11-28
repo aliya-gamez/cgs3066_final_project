@@ -44,27 +44,27 @@ header ul {
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 3em;
+    gap: 4em;
 }
 
-header ul .right {  
-}
-
-header a {
+header ul a {
     text-decoration: none;
     color: var(--light-shade);
     font-size: 18px;
-    gap: 5px;
+    gap: 1em;
+    display: flex;
+    align-items: center;
 }
 
 header ul a:hover {
-    transition: all 100ms ease-in-out;
-    font-weight: bold;
+    color: var(--main-color);
+    transition: color 250ms ease-in-out;
 }
 
 header #logo {
     width: auto;
     height: 75px;
+    margin-right: 1em;
 }
 
 
@@ -94,8 +94,10 @@ header #logo {
 .featured-recipe .text h1 {
     font-size: 36px;
     margin-bottom: 15px;
+    line-height: 1.15em;
 }
 
 .featured-recipe .text p {
     font-size: 18px;
+    line-height: 1.75em;
 }
