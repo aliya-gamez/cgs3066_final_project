@@ -72,15 +72,6 @@ header #logo {
     margin-right: 40px;
 }
 
-/* former img style
-header #logo {
-    width: auto;
-    height: 75px;
-    margin-right: 1em;
-}*/
-
-
-
 /*Main Content Styles */
 
 /*Feature Recipe */
@@ -97,14 +88,6 @@ header #logo {
     box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.26), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
-/*
-.featured-recipe img {
-    height: 100%;
-    width: auto;
-    border-top-left-radius: 9px;
-    border-bottom-left-radius: 9px;
-
-}*/
 
 .featured-recipe .recipe-img { /*this is so the recipe does not overflow boundaries even if a random image is used*/
     background-image: url("../img/recipe/key_lime_pie.jpg"); /*for some reason directory needs ../ to work on wamp64 */
@@ -123,7 +106,7 @@ header #logo {
     margin: 120px 50px;
 }
 
-.featured-recipe .recipe-text h1 {
+.featured-recipe .recipe-text h2 {
     font-size: 36px;
     margin-bottom: 15px;
     line-height: 1.15em;
@@ -148,22 +131,17 @@ header #logo {
 }
 
 .recipes .recipe-list .recipe {
-    background-color: var(--dark-accent);
-    color: var(--light-shade);
-    height: 400px;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
+    
 }
 
 .recipes .recipe-list .recipe-img {
     background-image: url("../img/recipe/key_lime_pie.jpg"); /*for some reason directory needs ../ to work on wamp64 */
-    height: 50%;
-    width: 100%;
+    height: 200px;
+    width: 300px;
     background-position: center center;
     background-size: cover;
     border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
+    border-top-right-radius: 6px;
     margin: 0;
     padding: 0;
     border: 0;
@@ -173,6 +151,9 @@ header #logo {
 
 }
 
+.recipes .recipe-list .recipe-text h2 {
+
+}
 
 
 footer {

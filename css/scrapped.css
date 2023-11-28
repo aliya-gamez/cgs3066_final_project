@@ -1,0 +1,44 @@
+.featured-recipe img {
+    height: 100%;
+    width: auto;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+}
+
+header #logo {
+    width: auto;
+    height: 75px;
+    margin-right: 1em;
+}
+
+.recipes .recipe-list .recipe {
+    background-color: var(--dark-accent);
+    color: var(--light-shade);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 7px;
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.26), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+
+}
+
+.recipes .recipe-list .recipe-img {
+    background-image: url("../img/recipe/key_lime_pie.jpg"); /*for some reason directory needs ../ to work on wamp64 */
+    height: 200px;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.recipes .recipe-list .recipe-text {
+    padding: 1.5em 2em;
+}
+
+.recipes .recipe-list .recipe-text h2 {
+
+}
