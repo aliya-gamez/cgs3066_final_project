@@ -12,7 +12,7 @@ HTML, CSS, JavaScript, PHP and MySQL.
 - id: INT, AUTO_INCREMENT
 - title: VARCHAR(255), NOT NULL
 - description: TEXT, NOT NULL
-- image: VARCHAR(255), NOT NULL
+- recipe-img: VARCHAR(255), NOT NULL
 - ingredients: JSON, NOT NULL
 - instructions: JSON, NOT NULL
 - author, VARCHAR(75)
@@ -31,7 +31,7 @@ HTML
 - upload.html: form to input recipes
     - title
     - description
-    - image
+    - recipe-img
     - ingredients
     - instructions
     - author
