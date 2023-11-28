@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Tangerine:wght@700&display=swap');
 
 :root {
     --main-color: #D9534F;
-    --light-accent: #b1a09f;
-    --dark-accent: #8f8278;
-    --light-shade: #f4efed;
-    --dark-shade: #372b33;
+    --light-accent: #D8906F;
+    --dark-accent: #937477;
+    --light-shade: #F4F0F3;
+    --dark-shade: #3E2723;
 }
 
 * {
@@ -30,8 +29,9 @@ nav, section {
 /*Header Styles */
 
 header {
+   background-color: var(--dark-shade);
    margin-bottom: 35px;
-   padding: 30px 25px 15px 25px;
+   padding: 15px 25px;
 }
 
 header nav {
@@ -49,29 +49,22 @@ header ul {
 
 header ul a {
     text-decoration: none;
-    color: var(--dark-shade);
+    color: var(--light-shade);
     font-size: 18px;
     gap: 1em;
     display: flex;
     align-items: center;
 }
 
-header ul a:hover:not(#logo) {
+header ul a:hover {
     color: var(--main-color);
     transition: color 250ms ease-in-out;
 }
 
-/* img style
 header #logo {
     width: auto;
     height: 75px;
     margin-right: 1em;
-}*/
-
-header #logo {
-    font-family: 'Tangerine', cursive;
-    font-size: 3.4em;
-    padding-left: 15px;
 }
 
 
@@ -82,16 +75,16 @@ header #logo {
     color: var(--light-shade);
     padding: 0;
     height: 500px;
-    border-radius: 10px;
+    border-radius: 20px;
     display: flex;
-    border: 1px solid var(--dark-shade);
+    border: 4px solid var(--dark-shade);
 }
 
 .featured-recipe img {
     height: 100%;
     width: auto;
-    border-top-left-radius: 9px;
-    border-bottom-left-radius: 9px;
+    border-top-left-radius: 17px;
+    border-bottom-left-radius: 17px;
 }
 
 .featured-recipe .text {
@@ -107,9 +100,4 @@ header #logo {
 .featured-recipe .text p {
     font-size: 18px;
     line-height: 1.75em;
-}
-
-footer {
-    margin-top: 50px;
-    text-align: center;
 }
