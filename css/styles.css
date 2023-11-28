@@ -44,14 +44,14 @@ header ul {
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 4em;
+    gap: 3em;
 }
 
 header ul a {
     text-decoration: none;
     color: var(--dark-shade);
     font-size: 18px;
-    gap: 1em;
+    gap: .5em;
     display: flex;
     align-items: center;
 }
@@ -72,6 +72,7 @@ header #logo {
     font-family: 'Tangerine', cursive;
     font-size: 3.4em;
     padding-left: 15px;
+    margin-right: 40px;
 }
 
 
@@ -92,6 +93,19 @@ header #logo {
     width: auto;
     border-top-left-radius: 9px;
     border-bottom-left-radius: 9px;
+}
+
+.featured-recipe .recipe-img { /*this is so the recipe does not overflow boundaries even if a random image is used*/
+    background-image: url("../img/recipe/key_lime_pie.jpg"); /*for some reason directory needs ../ to work on wamp64 */
+    height: 100%;
+    width: 150%;
+    background-position: center center;
+    background-size: cover;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 .featured-recipe .text {
