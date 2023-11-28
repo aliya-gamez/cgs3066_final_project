@@ -63,6 +63,8 @@ header ul a {
 header ul a:hover:not(#logo) {
     color: var(--main-color);
     transition: color 250ms ease-in-out;
+    animation: shake 250ms;
+    transform: scale(1.03) rotate(.5deg);
 }
 
 header #logo {
@@ -79,7 +81,7 @@ header #logo {
 .featured-recipe {
     background-color: var(--dark-accent);
     color: var(--light-shade);
-    margin-bottom: 4em;
+    margin-bottom: 5em;
     padding: 0;
     height: 500px;
     border-radius: 7px;
@@ -103,18 +105,42 @@ header #logo {
 }
 
 .featured-recipe .recipe-text {
-    margin: 120px 50px;
+    margin-top: 20px;
+    padding: 120px 50px;
 }
 
 .featured-recipe .recipe-text h2 {
     font-size: 36px;
-    margin-bottom: 15px;
     line-height: 1.15em;
+    margin-bottom: .25em;
 }
 
 .featured-recipe .recipe-text p {
     font-size: 18px;
     line-height: 1.75em;
+    margin-bottom: 2.5em;
+}
+
+.featured-recipe .recipe-text button {
+    border: none;
+    border-radius: 30px;
+    position: relative;
+    padding: 12px 30px;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    background-color: #fff;
+}
+
+.featured-recipe .recipe-text button:hover {
+    cursor: pointer;
+    background-color: #eee;
+    transform: scale(1.05);
+    color: var(--dark-accent);
+    transition: all 250ms ease-in-out;
+    animation: shake 250ms;
+    transform: scale(1.03) rotate(.5deg);
 }
 
 /*Recipes Grid */
@@ -123,7 +149,16 @@ header #logo {
     text-align: center;
     font-weight: 300;
     font-size: 2em;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 2em;
+    border-bottom: 1px solid var(--dark-shade);
+    line-height: .1em;
+}
+
+.recipes > h1 span {
+    background-color: var(--darker-light-shade);
+    padding: 0 15px;
 }
 
 .recipes .recipe-list {
@@ -136,6 +171,7 @@ header #logo {
 .recipes .recipe-list .recipe {
     width: 100%;
     height: 350px;
+    margin-bottom: 10px;
 }
 
 .recipes .recipe-list .recipe a {
@@ -160,16 +196,12 @@ header #logo {
     transform: scale(1.03) rotate(.5deg);
 }
 
-
-
 @keyframes shake {
     0% { transform: scale(1.0) rotate(0deg);}
     33% { transform: scale(1.01) rotate(1deg);}
     66% { transform: scale(1.02) rotate(-1deg);}
     100% { transform: scale(1.03) rotate(.5deg);}
 }
-
-
 
 .recipes .recipe-list .recipe-text {
     padding: 2em .3em;
