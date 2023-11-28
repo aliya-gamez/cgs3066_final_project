@@ -27,6 +27,7 @@ NOTE:
 
 HTML
 - index.html: recipes will be featured, with featured Recipe that chooses random MySQL ID and below that a grid of recipe cards
+    - featured recipe will either use random mysql ID from database, or last added.
 - upload.html: form to input recipes
     - title
     - description
