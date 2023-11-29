@@ -159,6 +159,7 @@ header #logo img {
     transform: scale(1.03) rotate(0.25deg);
 }
 
+
 /*Recipes Grid */
 
 .recipes > h1, .add-recipes > h1 {
@@ -245,4 +246,20 @@ footer p {
     background-color: var(--main-dark);
     color: white;
     box-shadow: 0 6px 10px 5px rgba(0,0,0,0.5);
+}
+
+/* creamy_key_lime_pie.html */
+
+.view-recipe h2 + ul li{
+    color: black;
+    margin-left: 50px;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.view-recipe img{
+    width: 400px;
+    height: 300px;
+    float: right;
+    margin-right: -80px;
 }
