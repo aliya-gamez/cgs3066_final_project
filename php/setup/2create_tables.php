@@ -25,27 +25,44 @@ try
     */
     
     $createTable = "CREATE TABLE Recipes (
-        recipe_id INT AUTO_INCREMENT PRIMARY KEY,
+        recipe_id INT PRIMARY KEY,
         recipe_title VARCHAR(255) NOT NULL,
-        recipe_desc VARCHAR(255) NOT NULL,
+        recipe_description VARCHAR(255) NOT NULL,
         recipe_ingredients JSON NOT NULL,
         recipe_instructions JSON NOT NULL,
         recipe_author VARCHAR(75),
-        recipe_img VARCHAR(255),
-        recipe_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        recipe_img VARCHAR(255)
     )";
 
     //DELETES RECIPE TABLE
-    $deleteTable = "DROP TABLE Recipes";
+    $deleteTable = "DROP TABLE IF EXISTS Recipes";
     $conn -> exec($deleteTable);
-    echo "<h1>Table Recipes deleted successfully!</h1>"; 
-
-    $showTables = "SHOW TABLES FROM foodfindsDB";
+    echo "<h1>Table Recipes deleted successfully!</h1>";
 
     //CREATES RECIPE TABLE
-    $conn -> exec($recipeTable);
+    $conn -> exec($createTable);
     echo "<h1>Table Recipes created successfully!</h1>";
-    echo exec($showTables);
+
+    //SHOW RECIPE TABLE
+    $showTables = "SHOW TABLES FROM foodfindsDB";
+    $tables = $conn -> query($showTables);
+    echo "<h2>Tables in the Database:</h2>";
+    echo "<ul>";
+    foreach ($tables as $table) {
+        echo "<li>" . $table[0] . "</li>";
+    }
+    echo "</ul>";
+
+    // SHOW RECIPE TABLE FIELDS
+    $showFields = "SHOW COLUMNS FROM Recipes";
+    $fields = $conn->query($showFields);
+
+    echo "<h2>Fields in the Recipes Table:</h2>";
+    echo "<ul>";
+    foreach ($fields as $field) {
+        echo "<li>" . $field['Field'] . " (" . $field['Type'] . ")</li>";
+    }
+    echo "</ul>";
 }
 catch(PDOException $e)
 {

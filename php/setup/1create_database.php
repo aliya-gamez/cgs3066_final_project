@@ -25,7 +25,6 @@ try {
   */
 
   //Implement SQL statement to create database.
-
   $sql = "CREATE DATABASE foodfindsDB";
 
   //Execute SQL statement to create database; use exec() because no results are returned.
