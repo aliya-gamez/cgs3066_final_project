@@ -250,7 +250,15 @@ footer p {
 
 /* add_recipe.html */
 
+.add-recipes h1 {
+   text-align: center;
+}
 
+.add-recipes form {
+    padding: 20px;
+    border: 2px solid var(--main-dark);
+    border-radius: 5px;
+}
 
 /* creamy_key_lime_pie.html */
 
