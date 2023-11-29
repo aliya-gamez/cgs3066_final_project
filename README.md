@@ -7,6 +7,20 @@ HTML, CSS, JavaScript, PHP and MySQL.
 
 ## To-do:
 
+**Set up HTML/CSS:**
+
+HTML
+- index.html: recipes will be featured, with featured Recipe that chooses random MySQL ID and below that a grid of recipe cards
+    - featured recipe will either use random mysql ID from database, or last added.
+- upload.html: form to input recipes
+    - title
+    - description
+    - recipe-img
+    - ingredients
+    - instructions
+    - author
+- about.html
+
 **MySQL Database Structure/Table:**
 
 - id: INT, AUTO_INCREMENT
@@ -22,22 +36,6 @@ NOTE:
 - Need to figure out how to turn ingredients and instructions into lists, aka JSON -> HTML
 - How to take an image as input and store it into /img/recipe
 - Treating recipes like blog posts?
-  
-**Set up HTML/CSS:**
-
-HTML
-- index.html: recipes will be featured, with featured Recipe that chooses random MySQL ID and below that a grid of recipe cards
-    - featured recipe will either use random mysql ID from database, or last added.
-- upload.html: form to input recipes
-    - title
-    - description
-    - recipe-img
-    - ingredients
-    - instructions
-    - author
-- about.html
-
-
 
 **Set up PHP code:**
 

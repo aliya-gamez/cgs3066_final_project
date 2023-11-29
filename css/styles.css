@@ -36,14 +36,12 @@ header {
     padding: 20px 15px;
     background-color: var(--light-shade);
     box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.5);
-    position: relative;
 }
 
 header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
 }
 
 header ul {
