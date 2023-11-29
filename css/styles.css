@@ -60,6 +60,13 @@ header ul a {
     align-items: center;
 }
 
+header ul a.active {
+    border-bottom: 1px solid #000;
+    padding-bottom: 3px;
+    position: relative;
+    top: 3px;
+}
+
 header ul a:hover:not(#logo) {
     color: var(--main-color);
     transition: color 250ms ease-in-out;
