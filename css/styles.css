@@ -21,6 +21,10 @@ body {
     font-weight: 300;
 }
 
+main {
+    min-height: 100vh;
+}
+
 /*Container width styles*/
 nav, section {
     width: 1200px;
@@ -234,7 +238,6 @@ header #logo img {
 footer {
     margin-top: 10em;
     text-align: center;
-    min-height: 100vh;
 }
 
 footer p {
