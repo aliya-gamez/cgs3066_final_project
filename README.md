@@ -30,7 +30,7 @@ HTML
 - ingredients: JSON, NOT NULL
 - instructions: JSON, NOT NULL
 - author, VARCHAR(75)
-- created_at: TIME
+- uploaded_date: TIME
 
 NOTE:
 - Need to figure out how to turn ingredients and instructions into lists, aka JSON -> HTML

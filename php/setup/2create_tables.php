@@ -28,6 +28,12 @@ try
     
     $recipeTable = "CREATE TABLE Recipes (
         recipe_id INT AUTO_INCREMENT PRIMARY KEY
+        title VARCHAR(255) NOT NULL,
+        ingredients JSON NOT NULL,
+        instructions JSON NOT NULL,
+        author VARCHAR(75),
+        img_url VARCHAR(255),
+        uploaded_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )";
 
     //DELETES TABLE
