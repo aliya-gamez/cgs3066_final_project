@@ -258,6 +258,13 @@ footer p {
     padding: 20px;
     border: 2px solid var(--main-dark);
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.add-recipes form label {
+    display: block;
 }
 
 /* creamy_key_lime_pie.html */
