@@ -234,6 +234,7 @@ header #logo img {
 footer {
     margin-top: 10em;
     text-align: center;
+    min-height: 100vh;
 }
 
 footer p {
