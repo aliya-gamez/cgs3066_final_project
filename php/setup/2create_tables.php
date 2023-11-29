@@ -6,12 +6,10 @@ $password = "";
 try
 {
     //Connect to the database.
-
     $conn = new PDO($dsn, $username, $password);
 
     //Set an attribute on the database handle.
     //The attribute ATTR_ERRMODE (for Error reporting mode of PDO) is set to a value of ERRMODE_EXCEPTION (for Throws PDOExceptions).
-
     $conn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     //Implement SQL statements to create various tables in database.
@@ -48,6 +46,7 @@ try
     
     $conn -> exec($recipeTable);
     echo "<h1>Table Recipes created successfully!</h1>";
+    echo $showTables;
 }
 catch(PDOException $e)
 {
