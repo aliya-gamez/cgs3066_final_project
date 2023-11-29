@@ -251,22 +251,33 @@ footer p {
 /* add_recipe.html */
 
 .add-recipes h1 {
-   text-align: center;
 }
 
 .add-recipes form {
-    padding: 20px;
-    border: 2px solid var(--main-dark);
-    border-radius: 5px;
+    margin: 0;
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
     gap: 2em;
 }
 
-.add-recipes form label {
+.add-recipes form label:not(input[type=file]) {
     display: block;
     margin-bottom: 5px;
 }
+
+.add-recipes input[type=text], .add-recipes textarea {
+    box-sizing: border-box;
+    width: 250px;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+ }
+
+ .add-recipes textarea {
+    width: 500px;
+ }
 
 .add-recipes input[type=submit] {
     width: 250px;
