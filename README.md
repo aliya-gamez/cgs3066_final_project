@@ -3,6 +3,8 @@
 **Members:** Aliya Gamez, Joseph Galego, Matthew Gonzales
 HTML, CSS, JavaScript, PHP and MySQL.
 
+**URL:** [Github Pages Link](https://aliya-gamez.github.io/cgs3066_final_project/) (Only for HTML, CSS and JS functionality)
+
 **Description:**
 
 ## To-do:
