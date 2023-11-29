@@ -24,8 +24,8 @@ try
     DOG Date
     */
     
-    $recipeTable = "CREATE TABLE Recipes (
-        recipe_id INT AUTO_INCREMENT PRIMARY KEY
+    $createTable = "CREATE TABLE Recipes (
+        recipe_id INT AUTO_INCREMENT PRIMARY KEY,
         recipe_title VARCHAR(255) NOT NULL,
         recipe_desc VARCHAR(255) NOT NULL,
         recipe_ingredients JSON NOT NULL,
@@ -35,19 +35,17 @@ try
         recipe_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )";
 
-    //DELETES TABLE
+    //DELETES RECIPE TABLE
     $deleteTable = "DROP TABLE Recipes";
     $conn -> exec($deleteTable);
-    echo "<h1>Table Recipes deleted successfully!</h1>";
+    echo "<h1>Table Recipes deleted successfully!</h1>"; 
 
     $showTables = "SHOW TABLES FROM foodfindsDB";
 
-    //Execute SQL statements to create various tables in database; use exec() because no results are returned.
-
-    
+    //CREATES RECIPE TABLE
     $conn -> exec($recipeTable);
     echo "<h1>Table Recipes created successfully!</h1>";
-    echo $showTables;
+    echo exec($showTables);
 }
 catch(PDOException $e)
 {
