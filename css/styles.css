@@ -290,9 +290,10 @@ footer p {
     cursor: pointer;
  }
  
- .add-recipes input[type=submit]:hover {
+.add-recipes input[type=submit]:hover {
     background-color: #822a39;
  }
+
 
 /* creamy_key_lime_pie.html */
 
