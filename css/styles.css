@@ -271,7 +271,7 @@ footer p {
 .add-recipes input[type=submit] {
     width: 250px;
     color: white;
-    background-color: #09f;
+    background-color: var(--main-color);
     padding: 15px;
     margin: 10px 0;
     border: none;
@@ -280,7 +280,7 @@ footer p {
  }
  
  .add-recipes input[type=submit]:hover {
-    background-color: #07d;
+    background-color: #822a39;
  }
 
 /* creamy_key_lime_pie.html */
