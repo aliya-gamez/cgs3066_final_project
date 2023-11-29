@@ -14,7 +14,7 @@
                 <!--<li><a href="#"><img id="logo" src="img/logo.png" alt="Picture of foodlove logo"></a></li>-->
                 <li><a id="logo" href="index.html"><img src="img/logo_food.png">foodfinds</a></li>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="about.html">About Us</a></li>
             </ul>
             <ul class="right">
                 <li><a class="active" href="add_recipe.html"><span class="material-symbols-outlined">menu_book</span>Add Recipe</a></li>
@@ -23,7 +23,22 @@
     </header>
     <main>
         <section class="add-recipes">
-            <h1><span>Add Recipe</span></h1>
+            <h1>Add Recipe</h1>
+            <!--recipe_... ID(INT), TITLE(VARCHAR255), DESCRIPTION(VARCHAR255), INGREDIENTS(JSON), INSTRUCTIONS(JSON), AUTHOR(VARCHAR75), IMG(VARCHAR255)-->
+            <form method="POST" action="add_recipe.php">
+                <div>
+                    <label for="recipe_title">Recipe Name:</label>
+                    <input type="text" name="recipe_title" id="recipe_title" required>
+                </div>
+                <div>
+                    <label for="recipe_description">Description:</label>
+                    <textarea name="recipe_description" id="recipe_description" rows="2" required></textarea>
+                </div>
+                <div>
+                    <label for="recipe_ingredients">Ingredients (one per line):</label>
+                    <textarea name="recipe_ingredients" id="recipe_ingredients" rows="6" required></textarea>
+                </div>
+            </form> 
         </section>
     </main>
     <footer>

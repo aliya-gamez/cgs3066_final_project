@@ -162,7 +162,7 @@ header #logo img {
 
 /*Recipes Grid */
 
-.recipes > h1, .add-recipes > h1 {
+.recipes > h1 {
     text-align: center;
     font-weight: 300;
     font-size: 2em;
