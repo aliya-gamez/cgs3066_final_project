@@ -24,30 +24,31 @@
     <main>
         <section class="add-recipes">
             <h1>Add Recipe</h1>
+            <p><span class="required-star">*</span> = required input</p>
             <!--recipe_... ID(INT), TITLE(VARCHAR255), DESCRIPTION(VARCHAR255), INGREDIENTS(JSON), INSTRUCTIONS(JSON), AUTHOR(VARCHAR75), IMG(VARCHAR255)-->
             <form method="POST" action="add_recipe.php">
                 <div>
-                    <label for="recipe_title">Recipe Name:</label>
+                    <label for="recipe_title">Recipe Name <span class="required-star">*</span></label>
                     <input type="text" name="recipe_title" id="recipe_title" required>
                 </div>
                 <div>
-                    <label for="recipe_description">Description:</label>
+                    <label for="recipe_description">Description <span class="required-star">*</span></label>
                     <textarea name="recipe_description" id="recipe_description" rows="3" cols="50" required></textarea>
                 </div>
                 <div>
-                    <label for="recipe_ingredients">Ingredients (one per line):</label>
+                    <label for="recipe_ingredients">Ingredients (one per line) <span class="required-star">*</span></label>
                     <textarea name="recipe_ingredients" id="recipe_ingredients" rows="6" cols="50"required></textarea>
                 </div>
                 <div>
-                    <label for="recipe_instructions">Instructions (one per line)</label>
+                    <label for="recipe_instructions">Instructions (one per line) <span class="required-star">*</span></label>
                     <textarea name="recipe_instructions" id="recipe_instructions" rows="6" cols="50"required></textarea>
                 </div>
                 <div>
-                    <label for="recipe_author">Author:</label>
+                    <label for="recipe_author">Author <span class="required-star">*</span></label>
                     <input type="text" name="recipe_author" id="recipe_author" required>
                 </div>
                 <div>
-                    <label for="recipe_img">Recipe Image:</label>
+                    <label for="recipe_img">Recipe Image <span class="required-star">*</span></label>
                     <input type="file" id="image" name="image" accept="image/*" required>
                 </div>
                 <div>

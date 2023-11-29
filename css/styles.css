@@ -251,6 +251,12 @@ footer p {
 /* add_recipe.html */
 
 .add-recipes h1 {
+    margin-bottom: 5px;
+}
+
+.add-recipes span.required-star {
+    color: var(--main-color);
+    font-weight: bold;
 }
 
 .add-recipes form {
@@ -266,13 +272,14 @@ footer p {
     margin-bottom: 5px;
 }
 
-.add-recipes input[type=text], .add-recipes textarea {
+.add-recipes input[type=text], .add-recipes input[type=file], .add-recipes textarea {
     box-sizing: border-box;
     width: 250px;
     padding: 8px;
     margin-top: 4px;
     border: 1px solid #aaa;
     border-radius: 4px;
+    background-color: #fff;
  }
 
  .add-recipes textarea {
@@ -293,6 +300,7 @@ footer p {
 .add-recipes input[type=submit]:hover {
     background-color: #822a39;
  }
+
 
 
 /* creamy_key_lime_pie.html */
