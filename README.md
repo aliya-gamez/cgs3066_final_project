@@ -32,6 +32,9 @@ HTML
 - author, VARCHAR(75)
 - uploaded_date: TIME
 
+*changed final names in 2create_tables.php
+
+
 NOTE:
 - Need to figure out how to turn ingredients and instructions into lists, aka JSON -> HTML
 - How to take an image as input and store it into /img/recipe
