@@ -43,12 +43,12 @@ async function getRecipes() {
 
 document.addEventListener("DOMContentLoaded",getRecipes);
 
-//Get random recipe from table data and input on front-end hero banner
+/*Get random recipe from table data and input on front-end hero banner
 async function getRandomRecipes() {
     //error handling in case fetch doesnt go thru
     try {
         //fetch request and handling?
-        let response = await fetch('php/get_recipes.php'); //response variabe for a fetch request, which is fetched from get_recipes.php
+        let response = await fetch('php/random_recipe.php'); //response variabe for a fetch request, which is fetched from get_recipes.php
         let json = await response.json(); //parse response as a json file, which it is
         let recipeListClass = document.getElementById("recipe-list"); //recipe list class container
         let recipeListStorage = document.createDocumentFragment();
@@ -75,4 +75,4 @@ async function getRandomRecipes() {
     }
 }
 
-//document.addEventListener("DOMContentLoaded",getRecipes);
+//document.addEventListener("DOMContentLoaded",getRecipes); */
