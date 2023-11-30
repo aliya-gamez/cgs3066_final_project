@@ -22,6 +22,7 @@ try {
         $author = $_POST["recipe_author"];
         $img = $_POST["recipe_img"];
 
+        //insert these variables into a variable to be executed immediately after
         $sql = "INSERT INTO Recipes (recipe_title, recipe_description, recipe_ingredients, recipe_instructions, recipe_author, recipe_img) 
                 VALUES ('$title', '$description', '$ingredients', '$instructions', '$author', '$img')";
 
