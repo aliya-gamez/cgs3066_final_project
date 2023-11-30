@@ -48,7 +48,7 @@ NOTE:
 - get_random_recipe.php (This gets a random recipe from Recipe table, this will be fetched and inputed into the hero banner on index.html)
 
 **Set up JavaScript:**
-- Make function that creates HTML page with the recipe that was clicked on in index.html
+- Make function that creates HTML page with the recipe that was clicked on in index.html (must have delete button for recipe)
 
 **Errors:**
 

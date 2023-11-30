@@ -18,6 +18,7 @@ async function getRecipes() {
         let json = await response.json(); //parse response as a json file, which it is
         let recipeListClass = document.getElementById("recipe-list"); //recipe list class container
         let recipeListStorage = document.createDocumentFragment();
+        recipeListClass.innerHTML = `<!--Database Entry Start-->`;
 
         json.forEach(recipe => {
             let recipeCard = document.createElement("div"); //create recipeCard div
@@ -30,7 +31,7 @@ async function getRecipes() {
                         <p class="description">${recipe.recipe_description}</p>
                     </div>
                 </a>
-            `;
+                `;
             recipeListStorage.appendChild(recipeCard);
         });
         recipeListClass.appendChild(recipeListStorage);

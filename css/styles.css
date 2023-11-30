@@ -318,3 +318,13 @@ footer p {
     float: right;
     margin-right: -80px;
 }
+
+/*aboutus*/
+
+.aboutus h1 {
+    margin-bottom: 5px;
+}
+
+.aboutus h2 {
+    margin-bottom: 3px;
+}
