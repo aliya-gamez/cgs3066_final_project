@@ -16,14 +16,14 @@ async function getRecipes() {
         //fetch request and handling?
         let response = await fetch('php/get_recipes.php'); //response variabe for a fetch request, which is fetched from get_recipes.php
         let json = await response.json(); //parse response as a json file, which it is
-
         let recipeListClass = document.getElementById("recipe-list"); //recipe list class container
+        let recipeListStorage = document.createDocumentFragment();
 
         json.forEach(recipe => {
             let recipeCard = document.createElement("div"); //create recipeCard div
             recipeCard.className = "recipe"; //assign class recipe (has styling that makes it a card)
             recipeCard.innerHTML = `
-                <a href="recipes/${encodeURIComponent(recipe.recipe_title)}.html">
+                <a href="recipes/${recipe.recipe_id}.html">
                     <div class="recipe-img" style="background-image: url(${recipe.recipe_img});"></div>
                     <div class="recipe-text">
                         <h2 class="title">${recipe.recipe_title}</h2>
@@ -31,10 +31,9 @@ async function getRecipes() {
                     </div>
                 </a>
             `;
-            recipeListClass.innerHTML = `<!--${recipe.recipe__title}-->`;
-            recipeListClass.appendChild(recipeCard);
+            recipeListStorage.appendChild(recipeCard);
         });
-        
+        recipeListClass.appendChild(recipeListStorage);
     }
     catch(error) {
         console.log("Couldn't get recipes: ", error);
