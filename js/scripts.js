@@ -34,6 +34,7 @@ async function getRecipes() {
                 </div>
             `;
         });
+        recipeListClass.appendChild(recipeCard);
     }
     catch(error) {
         console.log("Couldn't get recipes");
