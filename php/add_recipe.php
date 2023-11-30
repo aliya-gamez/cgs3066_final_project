@@ -33,7 +33,9 @@ try {
         $conn->exec($sql);
 
         // Display success message.
-        echo "<h1>Recipe added successfully!</h1>";
+        //echo "<h1>Recipe added successfully!</h1>";
+        header("Location: index.html");
+        exit();
     }
 } catch (PDOException $e) {
     echo "<h1>" . $e->getMessage() . "</h1>";
