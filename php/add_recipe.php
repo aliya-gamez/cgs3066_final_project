@@ -13,14 +13,14 @@ try {
 
     //Check if the HTML form was sent with the POST method
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        //Assigns data from POST array to variables
+        //simple text VARCHAR to variables
         $title = $_POST["recipe_title"];
         $description = $_POST["recipe_description"];
-        //TextArea is turned into string of arrays, then into json, then assigned to variable
-        $ingredients = json_encode(explode("\n", $_POST["recipe_ingredients"]));
-        $instructions = json_encode(explode("\n", $_POST["recipe_instructions"]));
         $author = $_POST["recipe_author"];
         $img = $_POST["recipe_img"];
+        //more complicated multiple lines of TextArea input to array to JSON
+        $ingredients = json_encode(explode("\n", $_POST["recipe_ingredients"]));
+        $instructions = json_encode(explode("\n", $_POST["recipe_instructions"]));
 
         //insert these variables into a variable to be executed immediately after
         $sql = "INSERT INTO Recipes (recipe_title, recipe_description, recipe_ingredients, recipe_instructions, recipe_author, recipe_img) 
