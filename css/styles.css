@@ -196,7 +196,7 @@ header #logo img {
 }
 
 .recipes .recipe-list .recipe .recipe-img {
-    background-image: url("../img/recipe/key_lime_pie.jpg"); /*for some reason directory needs ../ to work on wamp64 */
+    /*background-image: url("../img/recipe/key_lime_pie.jpg"); /*for some reason directory needs ../ to work on wamp64 */
     height: 60%;
     width: 100%;
     background-position: center center;
