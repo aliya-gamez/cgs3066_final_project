@@ -25,7 +25,7 @@ try
     */
     
     $createTable = "CREATE TABLE Recipes (
-        recipe_id INT PRIMARY KEY,
+        recipe_id INT AUTO_INCREMENT PRIMARY KEY,
         recipe_title VARCHAR(255) NOT NULL,
         recipe_description VARCHAR(255) NOT NULL,
         recipe_ingredients JSON NOT NULL,
