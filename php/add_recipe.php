@@ -18,9 +18,12 @@ try {
         $description = $_POST["recipe_description"];
         $author = $_POST["recipe_author"];
         $img = $_POST["recipe_img"];
-        //more complicated multiple lines of TextArea input to array to JSON
-        $ingredients = json_encode(explode("\n", $_POST["recipe_ingredients"]));
-        $instructions = json_encode(explode("\n", $_POST["recipe_instructions"]));
+        //Convert ingredient/insturciton textarea to array, and trima way whitespace
+        $ingredientsArray = array_map('trim', explode("\n", $_POST["recipe_ingredients"]));
+        $instructionsArray = array_map('trim', explode("\n", $_POST["recipe_instructions"]));
+        //Makes
+        $ingredients = json_encode($ingredientsArray);
+        $instructions = json_encode($instructionsArray);
 
         //insert these variables into a variable to be executed immediately after
         $sql = "INSERT INTO Recipes (recipe_title, recipe_description, recipe_ingredients, recipe_instructions, recipe_author, recipe_img) 
