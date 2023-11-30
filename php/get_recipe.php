@@ -4,10 +4,8 @@ $username = "root";
 $password = "";
 
 try {
-    //connect to the database
-    $conn = new PDO($dsn, $username, $password);
-    //Set an attribute on the database handle for error exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn = new PDO($dsn, $username, $password); //connect to the database
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //Set an attribute on the database handle for error exception
 
 
     $sql = "SELECT * FROM Recipes"; //sql Query to select entire Recipes Table
