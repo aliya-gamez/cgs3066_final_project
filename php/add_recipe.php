@@ -13,26 +13,22 @@ try {
 
     //Check if the HTML form was sent with the POST method
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        //Assigns data from POST array to variables
         $title = $_POST["recipe_title"];
         $description = $_POST["recipe_description"];
+        //TextArea is turned into string of arrays, then into json, then assigned to variable
         $ingredients = json_encode(explode("\n", $_POST["recipe_ingredients"]));
         $instructions = json_encode(explode("\n", $_POST["recipe_instructions"]));
         $author = $_POST["recipe_author"];
-        $img = "path_to_uploaded_image";  //cannot upload images, need to figure out alternative
+        $img = $_POST["recipe_img"];
 
         $sql = "INSERT INTO Recipes (recipe_title, recipe_description, recipe_ingredients, recipe_instructions, recipe_author, recipe_img) 
-                VALUES (:title, :description, :ingredients, :instructions, :author, :img)";
+                VALUES ('$title', '$description', '$ingredients', '$instructions', '$author', '$img')";
 
-        $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':title', $title);
-        $stmt->bindParam(':description', $description);
-        $stmt->bindParam(':ingredients', $ingredients);
-        $stmt->bindParam(':instructions', $instructions);
-        $stmt->bindParam(':author', $author);
-        $stmt->bindParam(':img', $img);
+        // Execute the SQL query.
+        $conn->exec($sql);
 
-        $stmt->execute();
-
+        // Display success message.
         echo "<h1>Recipe added successfully!</h1>";
     }
 } catch (PDOException $e) {
