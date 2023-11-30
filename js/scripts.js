@@ -23,16 +23,15 @@ async function getRecipes() {
             let recipeCard = document.createElement("div"); //create recipeCard div
             recipeCard.className = "recipe"; //assign class recipe (has styling that makes it a card)
             recipeCard.innerHTML = `
-                <div class="recipe">
-                    <a href="recipe_id/${recipe.recipe_id}/${encodeURIComponent(recipe.recipe_title)}.html">
-                        <div class="recipe-img" style="background-image: url(${recipe.recipe_img});"></div>
-                        <div class="recipe-text">
-                            <h2 class="title">${recipe.recipe_title}</h2>
-                            <p class="description">${recipe.recipe_description}</p>
-                        </div>
-                    </a>
-                </div>
+                <a href="recipes/${encodeURIComponent(recipe.recipe_title)}.html">
+                    <div class="recipe-img" style="background-image: url(${recipe.recipe_img});"></div>
+                    <div class="recipe-text">
+                        <h2 class="title">${recipe.recipe_title}</h2>
+                        <p class="description">${recipe.recipe_description}</p>
+                    </div>
+                </a>
             `;
+            recipeListClass.innerHTML = `<!--${recipe.recipe__title}-->`;
             recipeListClass.appendChild(recipeCard);
         });
         
