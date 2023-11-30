@@ -18,10 +18,22 @@ try {
     echo "<ul>";
     foreach ($recipes as $recipe) {
         echo "<li>";
-        echo "<strong>Title:</strong> " . $recipe['recipe_title'] . "<br>";
-        echo "<strong>Description:</strong> " . $recipe['recipe_description'] . "<br>";
+        echo "<strong>Title:</strong> " . $recipe['recipe_title'] . "<br>"; //Title
+        echo "<strong>Description:</strong> " . $recipe['recipe_description'] . "<br>"; //Desc
         echo "<strong>Ingredients:</strong> " . implode(", ", json_decode($recipe['recipe_ingredients'])) . "<br>";
         echo "<strong>Instructions:</strong> " . implode(", ", json_decode($recipe['recipe_instructions'])) . "<br>";
+        $ingredientsList = json_decode($recipe['recipe_ingredients']); //Ingredients
+        echo "<strong>Ingredients:</strong><ul>";
+        foreach ($ingredientsList as $ingredient) {
+            echo "<li>$ingredient</li>";
+        }
+        echo "</ul>";
+        $instructionsList = json_decode($recipe['recipe_instructions']); //Instructions
+        echo "<strong>Instructions:</strong><ol>";
+        foreach ($instructionsList as $instruction) {
+            echo "<li>$instruction</li>";
+        }
+        echo "</ol>";
         echo "<strong>Author:</strong> " . $recipe['recipe_author'] . "<br>";
         echo "<strong>Image:</strong> <img src='" . $recipe['recipe_img'] . "' alt='Recipe Image' width='100'><br>";
         echo "</li><br>";
