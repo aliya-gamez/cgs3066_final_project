@@ -1,7 +1,7 @@
 <?php
 $dsn = "mysql:host=localhost;dbname=foodfindsDB";
 $username = "root";
-$password = "2";
+$password = "";
 
 try {
     //connect to the database
@@ -12,12 +12,16 @@ try {
 
     $sql = "SELECT * FROM Recipes"; //sql Query to select entire Recipes Table
     $stmt = $conn->prepare($sql); //implement sql query to select entire Reciptes Table
-    $stmt = execute() //execute sql query to select entire Recipes table
-    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt -> execute(); //execute sql query to select entire Recipes table
 
-} catch (PDOException $e) {
+    $stmt -> setFetchMode(PDO::FETCH_ASSOC); //fetch method shall return each row as an array
+    $resultSet = $stmt -> fetchAll(); //fetch rows from result set
+
+    header('Content-Type: application/json'); //tells fetch response that this is a json output
+    echo json_encode($resultSet); //outputs Recipes as json
+}
+catch (PDOException $e) {
     echo "<h1>" . $e->getMessage() . "</h1>";
 }
-
 $conn = null;
 ?>
