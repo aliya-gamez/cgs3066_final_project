@@ -34,7 +34,7 @@ try {
 
         // Display success message.
         //echo "<h1>Recipe added successfully!</h1>";
-        header("Location: index.html");
+        header("Location: ../index.html");
         exit();
     }
 } catch (PDOException $e) {
