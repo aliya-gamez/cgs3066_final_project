@@ -38,9 +38,8 @@ HTML
 
 
 NOTE:
-- Need to figure out how to turn ingredients and instructions into lists, aka JSON -> HTML
-- How to take an image as input and store it into /img/recipe
-- Treating recipes like blog posts?
+- (FINISHED) Need to figure out how to turn ingredients and instructions into lists, aka JSON -> HTML
+- How to take an image as input and store it into /img/recipe (using URLs in the meantime)
 
 **Set up PHP code:**
 
