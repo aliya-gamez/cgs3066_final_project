@@ -13,7 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
 async function getRecipes() {
     //error handling in case fetch doesnt go thru
     try {
+        //fetch request and handling?
+        let response = await fetch('get_recipes.php'); //response variabe for a fetch request, which is fetched from get_recipes.php
+        let json = await response.json(); //parse response as a json file, which it is
 
+        let recipeList = 
     }
     catch(error) {
         console.log("Couldn't get recipes");
