@@ -10,6 +10,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //Get recipes table data and input on front-end
-document.addEventListener("DOMContentLoaded", function () {
+async function getRecipes() {
+    //error handling in case fetch doesnt go thru
+    try {
 
-});
+    }
+    catch(error) {
+        console.log("Couldn't get recipes");
+    }
+}
+
+document.addEventListener("DOMContentLoaded",getRecipes);
