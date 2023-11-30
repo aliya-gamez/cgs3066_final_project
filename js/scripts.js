@@ -17,7 +17,7 @@ async function getRecipes() {
         let response = await fetch('php/get_recipes.php'); //response variabe for a fetch request, which is fetched from get_recipes.php
         let json = await response.json(); //parse response as a json file, which it is
 
-        let recipeListClass = document.getElementsByClassName("recipe-list"); //recipe list class container
+        let recipeListClass = document.getElementById("recipe-list"); //recipe list class container
 
         json.forEach(recipe => {
             let recipeCard = document.createElement("div"); //create recipeCard div
