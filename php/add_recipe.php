@@ -18,7 +18,7 @@ try {
         $description = $_POST["recipe_description"];
         $author = $_POST["recipe_author"];
         $img = $_POST["recipe_img"];
-        //Convert ingredient/insturciton textarea to array, and trima way whitespace
+        //Convert ingredient/instruction textarea to array, and trim away whitespace
         $ingredientsArray = array_map('trim', explode("\n", $_POST["recipe_ingredients"]));
         $instructionsArray = array_map('trim', explode("\n", $_POST["recipe_instructions"]));
         //Makes
@@ -31,6 +31,44 @@ try {
 
         // Execute the SQL query.
         $conn->exec($sql);
+
+        // Get the ID of the last inserted recipe
+        $recipeId = $conn->lastInsertId();
+
+        // Generate HTML content for the recipe
+        $htmlContent = "
+        <!DOCTYPE html>
+        <html lang='en'>
+        <head>
+            <meta charset='UTF-8'>
+            <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+            <title>Recipe - $title</title>
+            <!-- Additional head elements as needed -->
+        </head>
+        <body>
+            <header>
+                <!-- Your header content -->
+            </header>
+            <main>
+                <section class='recipe-details'>
+                    <h1>$title</h1>
+                    <p>$description</p>
+                    <img src='$img' alt='$title Image'> <!-- Add this line for the image -->
+                    <!-- Add more details as needed -->
+                </section>
+            </main>
+            <footer>
+                <p>&copy; 2023 - $author </p>
+            </footer>
+        </body>
+        </html>
+        ";
+
+        // Define the file path where you want to save the HTML file
+        $filePath = "../recipes/{$recipeId}.html";
+
+        // Save the HTML content to the file
+        file_put_contents($filePath, $htmlContent);
 
         // Display success message.
         //echo "<h1>Recipe added successfully!</h1>";
