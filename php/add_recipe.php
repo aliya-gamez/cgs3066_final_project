@@ -54,6 +54,23 @@ try {
                     <h1>$title</h1>
                     <p>$description</p>
                     <img src='$img' alt='$title Image'> <!-- Add this line for the image -->
+                    <h2>Ingredients</h2>
+                    <ul>";
+
+        // Loop through ingredients and add them to the HTML content.
+        foreach ($ingredientsArray as $ingredient) {
+            $htmlContent .= "<li>$ingredient</li>";
+        }
+        $htmlContent .= "
+                    </ul>
+                    <h2>Instructions</h2>
+                    <ol>";
+        //Loop through instructions and add them to the HTML content.
+        foreach ($instructionsArray as $instruction) {
+            $htmlContent .= "<li>$instruction</li>";
+        }
+        $htmlContent .= "
+                    </ol>
                     <!-- Add more details as needed -->
                 </section>
             </main>
