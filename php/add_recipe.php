@@ -44,13 +44,26 @@ try {
             <meta name='viewport' content='width=device-width, initial-scale=1.0'>
             <title>Recipe - $title</title>
             <!-- Additional head elements as needed -->
+            <link rel='stylesheet' type='text/css' href='../css/styles.css'>
+            <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200'/>
         </head>
         <body>
             <header>
                 <!-- Your header content -->
+                <nav>
+                    <ul style='float: left;'>
+                        <li><a id='logo' href='../index.html'><img src='../img/logo_food.png'>foodfinds</a></li>
+                        <li><a href='../index.html'>Home</a></li>
+                        <li><a href='../about.html'>About Us</a></li>
+                    </ul>
+                    <ul class='right'>
+                        <li><a href='../add_recipe.html'><span class='material-symbols-outlined'>menu_book</span>Add Recipe</a></li>
+                    </ul>
+                </nav>
             </header>
             <main>
-                <section class='recipe-details'>
+                <section class='view-recipe'>
+                <div class='recipe-details'>
                     <h1>$title</h1>
                     <p>$description</p>
                     <img src='$img' alt='$title Image'> <!-- Add this line for the image -->
@@ -72,11 +85,13 @@ try {
         $htmlContent .= "
                     </ol>
                     <!-- Add more details as needed -->
+                </div>
                 </section>
             </main>
             <footer>
                 <p>&copy; 2023 - $author </p>
             </footer>
+            <script type='text/javascript' src='../js/scripts.js' defer></script>
         </body>
         </html>
         ";

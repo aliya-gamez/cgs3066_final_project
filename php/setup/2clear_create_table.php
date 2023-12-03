@@ -37,7 +37,7 @@ try
     /*DELETES RECIPE TABLE
     $deleteTable = "DROP TABLE IF EXISTS Recipes";
     $conn -> exec($deleteTable);
-    echo "<h1>Table Recipes deleted successfully!</h1>";*/
+    echo "<h1>Table Recipes deleted successfully!</h1>";//*/
 
     //CREATES RECIPE TABLE
     $conn -> exec($createTable);

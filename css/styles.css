@@ -305,6 +305,10 @@ footer p {
 
 /* creamy_key_lime_pie.html */
 
+.view-recipe .recipe-details {
+    width: 600px;
+}
+
 .view-recipe h2 + ul li{
     color: black;
     margin-left: 50px;
@@ -312,11 +316,16 @@ footer p {
     font-style: italic;
 }
 
-.view-recipe img{
-    width: 400px;
-    height: 300px;
-    float: right;
-    margin-right: -80px;
+.view-recipe .recipe-img { /*this is so the recipe does not overflow boundaries even if a random image is used*/
+    width: 600px;
+    height: 400px;
+    background-position: center center;
+    background-size: cover;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 /*aboutus*/
