@@ -66,7 +66,8 @@ try {
                 <div class='recipe-details'>
                     <h1>$title</h1>
                     <p>$description</p>
-                    <img src='$img' alt='$title Image'> <!-- Add this line for the image -->
+                    <!--<img src='$img' alt='$title Image'> Add this line for the image -->
+                    <div class='recipe-img' style='background-image: url($img);'></div>
                     <h2>Ingredients</h2>
                     <ul>";
 
