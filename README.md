@@ -56,5 +56,7 @@ NOTE:
 
 **Sources:**
 https://stackoverflow.com/questions/32751411/json-foreach-get-key-and-value
+https://stackoverflow.com/questions/19412/how-to-request-a-random-row-in-sql
+https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment
 
 

@@ -1,13 +1,13 @@
 <?php
 $dsn = "mysql:host=localhost;dbname=foodfindsDB";
 $username = "root";
-$password = "a";
+$password = "";
 
 try {
     $conn = new PDO($dsn, $username, $password); //connect to the database
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //Set an attribute on the database handle for error exception
 
-    $sql = "SELECT * FROM Recipes order by RAND() LIMIT 1"; //sql query to select a random row (recipe) from Recipes table
+    $sql = "SELECT * FROM Recipes ORDER BY RAND() LIMIT 1"; //sql query to select a random row (recipe) from Recipes table
     
     $stmt = $conn->prepare($sql); //implement sql query to select entire Reciptes Table
     $stmt -> execute(); //execute sql query to select entire Recipes table
