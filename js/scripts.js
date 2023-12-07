@@ -60,8 +60,8 @@ async function getRandomRecipe() {
             let featuredRecipeBtn = document.getElementById("featured-recipe-btn");
             featuredRecipeBtn.addEventListener("click", function() {
                 window.location.href = `recipes/${recipe.recipe_id}.html`;
-            });
-            console.log(`${recipe.recipe_title}`);  
+            }); 
+            console.log(`${recipe.recipe_title}`); 
         }
     }
     catch(error) {

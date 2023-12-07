@@ -22,7 +22,7 @@ body {
 }
 
 main {
-    min-height: 100vh;
+    min-height: 73.6vh;
 }
 
 /*Container width styles*/
@@ -108,8 +108,7 @@ header #logo img {
 
 
 .featured-recipe .recipe-img { /*this is so the recipe does not overflow boundaries even if a random image is used*/
-    height: 500px;
-    width: 200%;
+    width: 175%;
     background-position: center center;
     background-size: cover;
     border-top-left-radius: 6px;
@@ -187,6 +186,7 @@ header #logo img {
     grid-template-columns: 30% 30% 30%;
     justify-content: space-between;
     gap: 3%;
+    margin-bottom: 30px;
 }
 
 .recipes .recipe-list .recipe {
@@ -241,8 +241,31 @@ header #logo img {
 }
 
 footer {
-    margin-top: 10em;
     text-align: center;
+}
+
+footer .recipe-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+footer .recipe-buttons form input[type=submit] {
+    text-transform: uppercase;
+    width: 200px;
+    padding: 15px 30px;
+    background-color: var(--main-color);
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+footer .recipe-buttons input[type=submit]:hover {
+    background-color: #C35769;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
 }
 
 footer p {
