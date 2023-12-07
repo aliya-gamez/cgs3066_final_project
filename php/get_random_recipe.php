@@ -7,8 +7,6 @@ try {
     $conn = new PDO($dsn, $username, $password); //connect to the database
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //Set an attribute on the database handle for error exception
 
-
-    $sql0 = "SELECT * FROM Recipes"; //sql Query to select entire Recipes Table
     $sql = "SELECT * FROM Recipes order by RAND() LIMIT 1"; //sql query to select a random row (recipe) from Recipes table
     
     $stmt = $conn->prepare($sql); //implement sql query to select entire Reciptes Table
