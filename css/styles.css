@@ -18,7 +18,7 @@
 body {
     background-color: var(--darker-light-shade);
     font-family: 'Inter', sans-serif;
-    font-weight: 300;
+    font-weight: 300;   
 }
 
 main {
@@ -108,8 +108,8 @@ header #logo img {
 
 
 .featured-recipe .recipe-img { /*this is so the recipe does not overflow boundaries even if a random image is used*/
-    height: 100%;
-    width: 150%;
+    height: 500px;
+    width: 200%;
     background-position: center center;
     background-size: cover;
     border-top-left-radius: 6px;
@@ -119,9 +119,14 @@ header #logo img {
     border: 0;
 }
 
+.featured-recipe .recipe-text-box {
+    display: flex;
+    align-items: center;
+}
+
 .featured-recipe .recipe-text {
     margin-top: 20px;
-    padding: 120px 50px;
+    padding: 0px 50px;
 }
 
 .featured-recipe .recipe-text h2 {

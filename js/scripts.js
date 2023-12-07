@@ -38,7 +38,6 @@ async function getRandomRecipe() {
     console.log("getRandomRecipe() running...");
     //error handling in case fetch doesnt go thru
     try {
-        console.log("getRandomRecipe() running...");
         //fetch request and handling?
         let response = await fetch('php/get_random_recipe.php'); //response variabe for a fetch request, which is fetched from get_recipes.php
         let json = await response.json(); //parse response as a json file, which it is
@@ -49,10 +48,12 @@ async function getRandomRecipe() {
             let recipe = json[0];
             featuredRecipeID.innerHTML += `
             <div class="recipe-img" style="background-image: url(${recipe.recipe_img});"></div>
-            <div class="recipe-text">
-                <h2 class="title">${recipe.recipe_title}</h2>
-                <p class="description">${recipe.recipe_desc}</p>
-                <button id="featured-recipe-btn">Go to Recipe</button>
+            <div class="recipe-text-box">
+                <div class="recipe-text">
+                    <h2 class="title">${recipe.recipe_title}</h2>
+                    <p class="description">${recipe.recipe_description}</p>
+                    <button id="featured-recipe-btn">Go to Recipe</button>
+                </div>
             </div>
             `;  
             //Makes Featured Recipe Button A Link to Recipe
