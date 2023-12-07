@@ -108,7 +108,6 @@ header #logo img {
 
 
 .featured-recipe .recipe-img { /*this is so the recipe does not overflow boundaries even if a random image is used*/
-    background-image: url("../img/recipe/key_lime_pie.jpg"); /*for some reason directory needs ../ to work on wamp64 */
     height: 100%;
     width: 150%;
     background-position: center center;
