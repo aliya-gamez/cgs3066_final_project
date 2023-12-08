@@ -78,6 +78,7 @@ async function getRandomRecipe() {
     }
 }
 
+//Form Validation for add_recipe.php form
 function validateForm() {
     //Get values from form
     let title = document.getElementById("recipe_title").value;
