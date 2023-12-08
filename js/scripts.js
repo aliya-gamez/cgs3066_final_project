@@ -84,7 +84,7 @@ function validateForm() {
     let ingredients = document.getElementById("recipe_ingredients").value;
     let instructions = document.getElementById("recipe_instructions").value;
     let author = document.getElementById("recipe_author").value;
-    let image = document.getElementById("recipe_image").value;
+    let image = document.getElementById("recipe_img").value;
     let validationIsSuccessful = true;
 
     let outputResult = "";
@@ -129,8 +129,10 @@ function validateForm() {
     if(validationIsSuccessful) {
 
     }
-
-    outputContainer.innerHTML = outputResult;
+    else if(!validationIsSuccessful) {
+        outputContainer.innerHTML = outputResult;
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+    }
 }
 
 //Event Listeners
