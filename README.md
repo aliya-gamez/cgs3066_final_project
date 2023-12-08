@@ -32,5 +32,6 @@ HTML, CSS, JavaScript, PHP and MySQL.
 - https://stackoverflow.com/questions/19412/how-to-request-a-random-row-in-sql
 - https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment
 - https://www.geeksforgeeks.org/deleting-all-files-from-a-folder-using-php/
+- https://stackoverflow.com/questions/32410590/form-submission-after-javascript-validation
 
 
