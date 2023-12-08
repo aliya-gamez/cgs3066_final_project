@@ -65,7 +65,7 @@ try {
                 "Serve hot, garnished with extra Parmesan and a sprinkle of black pepper.",
             ],
             "recipe_author" => "Aliya",
-            "recipe_img" => "https://www.eatwell101.com/wp-content/uploads/2018/08/Mushroom-Risotto-recipe-1.jpg",
+            "recipe_img" => "https://bakingamoment.com/wp-content/uploads/2020/09/IMG_9193-mushroom-risotto.jpg",
         ],
         [
             "recipe_title" => "Zesty Lemon Garlic Shrimp",
@@ -86,7 +86,7 @@ try {
                 "Garnish with fresh parsley and serve hot over rice, pasta, or your favorite side.",
             ],
             "recipe_author" => "Aliya",
-            "recipe_img" => "https://www.joyfulhealthyeats.com/wp-content/uploads/2020/03/lemon-garlic-shrimp-recipe-3.jpg",
+            "recipe_img" => "https://cafedelites.com/wp-content/uploads/2016/12/Lemon-Garlic-Butter-Shrimp-199.jpg",
         ],
         
         [
@@ -114,7 +114,7 @@ try {
                 "Let it rest for 10 minutes before slicing. Serve hot and enjoy!",
             ],
             "recipe_author" => "Aliya",
-            "recipe_img" => "https://www.jessicagavin.com/wp-content/uploads/2019/11/lasagna-recipe-1200.jpg",
+            "recipe_img" => "https://www.jocooks.com/wp-content/uploads/2019/05/beef-lasagna-1-3.jpg",
         ],
         
         [
@@ -168,7 +168,7 @@ try {
                 "Serve immediately and enjoy a colorful and nutritious Vegetarian Quinoa Buddha Bowl!",
             ],
             "recipe_author" => "Aliya",
-            "recipe_img" => "https://www.eatwell101.com/wp-content/uploads/2020/06/Vegetarian-Quinoa-Bowl-recipe-1.jpg",
+            "recipe_img" => "https://feelgoodfoodie.net/wp-content/uploads/2017/12/Quinoa-Buddha-Bowl-4.jpg",
         ],
         [
             "recipe_title" => "Refreshing Watermelon Mint Salad",
@@ -192,7 +192,7 @@ try {
                 "Serve the Watermelon Mint Salad in a festive bowl and enjoy the perfect blend of sweetness and freshness!",
             ],
             "recipe_author" => "Aliya",
-            "recipe_img" => "https://www.twopeasandtheirpod.com/wp-content/uploads/2018/06/Watermelon-Feta-Mint-Salad-7.jpg",
+            "recipe_img" => "https://cdn.loveandlemons.com/wp-content/uploads/2013/08/watermelon-salad.jpg",
         ],
         [
             "recipe_title" => "Spicy Thai Basil Chicken",
@@ -218,7 +218,7 @@ try {
                 "Serve the Spicy Thai Basil Chicken over steamed jasmine rice and savor the enticing flavors of Thai cuisine!",
             ],
             "recipe_author" => "Aliya",
-            "recipe_img" => "https://www.eatingthaifood.com/wp-content/uploads/2015/07/thai-basil-chicken-recipe.jpg",
+            "recipe_img" => "https://www.recipetineats.com/wp-content/uploads/2017/03/Thai-Chilli-Basil-Chicken-Stir-Fry.jpg",
         ],
         
         [
@@ -242,7 +242,7 @@ try {
                 "Savor the velvety richness of this Decadent Chocolate Avocado Mousse without compromising on health!",
             ],
             "recipe_author" => "Aliya",
-            "recipe_img" => "https://www.texanerin.com/content/uploads/2015/07/avocado_chocolate_mousse3.jpg",
+            "recipe_img" => "https://chocolatecoveredkatie.com/wp-content/uploads/2015/10/Chocolate-Avocado-Mousse-Recipe.jpg",
         ],
                 
     ];
