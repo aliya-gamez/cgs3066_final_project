@@ -361,10 +361,16 @@ footer p {
 
 /*aboutus*/
 
-.aboutus h1 {
+.aboutus .text {
+    width: 55%;
+}
+
+.aboutus .text h2 {
+    font-size: 1.2em;
+    margin-top: 20px;
     margin-bottom: 5px;
 }
 
-.aboutus h2 {
-    margin-bottom: 3px;
+.aboutus .text p {
+    line-height: 1.5;
 }
