@@ -11,6 +11,68 @@ try {
     //Associative Array with Recipes table column and data
     $recipes = [
         [
+            "recipe_title" => "Italian Caprese Salad",
+            "recipe_description" => "Savor the simplicity of an Italian classic with the Caprese Salad. Fresh tomatoes, creamy mozzarella, and fragrant basil drizzled with balsamic glaze create a refreshing and elegant dish perfect for any occasion.",
+            "recipe_ingredients" => [
+                "4 large tomatoes, sliced",
+                "8 oz fresh mozzarella cheese, sliced",
+                "1 bunch fresh basil leaves",
+                "1/4 cup extra virgin olive oil",
+                "2 tbsp balsamic glaze",
+                "Salt and black pepper to taste",
+            ],
+            "recipe_instructions" => [
+                "Arrange the tomato and mozzarella slices on a serving platter, alternating and slightly overlapping.",
+                "Tuck fresh basil leaves between the tomato and mozzarella slices.",
+                "Drizzle extra virgin olive oil and balsamic glaze over the salad.",
+                "Season with salt and black pepper to taste.",
+                "Serve the Italian Caprese Salad as a light and flavorful appetizer or side dish.",
+            ],
+            "recipe_author" => "Aliya",
+            "recipe_img" => "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2019/07/Caprese-Salad-2-2.jpg",
+        ],
+        [
+            "recipe_title" => "Japanese Matcha Green Tea Latte",
+            "recipe_description" => "Indulge in the soothing and vibrant flavors of a Japanese Matcha Green Tea Latte. Whisked matcha powder combined with steamed milk creates a velvety and energizing beverage, perfect for a mindful moment of relaxation.",
+            "recipe_ingredients" => [
+                "1 tsp matcha green tea powder",
+                "1 cup milk (dairy or plant-based)",
+                "1-2 tbsp sweetener of choice (e.g., honey, sugar, or agave syrup)",
+            ],
+            "recipe_instructions" => [
+                "In a bowl, sift the matcha green tea powder to remove any lumps.",
+                "Heat the milk in a saucepan until its warm but not boiling.",
+                "Add the sifted matcha powder to a cup. Pour a small amount of the warm milk into the cup and whisk vigorously to create a smooth matcha paste.",
+                "Pour the remaining warm milk into the cup and continue whisking until frothy.",
+                "Sweeten the matcha latte with your preferred sweetener, adjusting to taste.",
+                "Enjoy the Japanese Matcha Green Tea Latte as a calming and flavorful beverage.",
+            ],
+            "recipe_author" => "Aliya",
+            "recipe_img" => "https://www.justonecookbook.com/wp-content/uploads/2022/12/Matcha-Latte-4589-II.jpg",
+        ],
+        [
+            "recipe_title" => "Mexican Street Corn (Elote)",
+            "recipe_description" => "Experience the bold and irresistible flavors of Mexican Street Corn, also known as Elote. Grilled corn on the cob coated with a creamy and spicy mixture of mayo, cotija cheese, chili powder, and lime juice for a fiesta in every bite.",
+            "recipe_ingredients" => [
+                "4 ears of corn, husked",
+                "1/2 cup mayonnaise",
+                "1/2 cup cotija cheese, crumbled",
+                "1 tsp chili powder",
+                "1/4 cup fresh cilantro, chopped",
+                "Lime wedges for serving",
+            ],
+            "recipe_instructions" => [
+                "Preheat the grill to medium-high heat.",
+                "Grill the corn, turning occasionally, until charred and cooked through (about 10 minutes).",
+                "In a bowl, mix mayonnaise, cotija cheese, chili powder, and chopped cilantro to create the elote sauce.",
+                "Brush the grilled corn with the elote sauce, ensuring an even coating.",
+                "Serve the Mexican Street Corn hot with lime wedges for squeezing over the top.",
+                "Enjoy the festive and flavorful delight of Elote as a perfect side dish or snack.",
+            ],
+            "recipe_author" => "Aliya",
+            "recipe_img" => "https://lilluna.com/wp-content/uploads/2023/06/mexican-street-corn3-resize-9.jpg",
+        ],        
+        [
             "recipe_title" => "Crispy Carnitas",
             "recipe_description" => "Every tortilla dreams of being stuffed with Carnitas. Picture seasoned pork slow-cooked into tender submission, gently shredded and pan-fried to golden, crispy perfection.",
             "recipe_ingredients" => [

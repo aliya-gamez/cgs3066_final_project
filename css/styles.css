@@ -237,8 +237,8 @@ footer {
 footer .recipe-buttons {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
     margin-top: 50px;
+    margin-bottom: 25px;
 }
 
 footer .recipe-buttons form input[type=submit] {
