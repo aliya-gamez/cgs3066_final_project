@@ -7,7 +7,6 @@ try {
     $conn = new PDO($dsn, $username, $password); //connect to the database
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //Set an attribute on the database handle for error exception
 
-
     $sql = "SELECT * FROM Recipes ORDER BY recipe_id DESC"; //sql Query to select entire Recipes Table
     $stmt = $conn->prepare($sql); //implement sql query to select entire Reciptes Table
     $stmt -> execute(); //execute sql query to select entire Recipes table
