@@ -7,7 +7,9 @@ HTML, CSS, JavaScript, PHP and MySQL.
 
 **Description:**
 
-## To-do:
+## Project Info
+
+**To-do:**
 - Form Validation for add_recipe.php
 - Add delete button to delete indivdual recipes in the recipes page of each recipe
 
