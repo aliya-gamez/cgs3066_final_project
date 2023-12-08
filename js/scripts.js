@@ -214,6 +214,10 @@ function validateForm() {
 
     if(!validationIsSuccessful) {
         outputContainer.innerHTML = outputResult;
+        return false;
+    }
+    else if(validationIsSuccessful) {
+        return true;
     }
 }
 
@@ -221,11 +225,3 @@ function validateForm() {
 document.addEventListener("DOMContentLoaded",initDatabase); //runs initDatabase() when DOM is loaded
 document.addEventListener("DOMContentLoaded",getRecipes); //runs getRecipes() when DOM is loaded
 document.addEventListener("DOMContentLoaded",getRandomRecipe); //runs getRandomRecipe() when DOM is loaded
-
-let addRecipeForm = document.getElementById("add-recipe-form");
-addRecipeForm.addEventListener("submit", function(event) { //runs validateForm() when form is submitted
-    event.preventDefault(); //prevents form from submitting
-    if(validateForm()) {
-        event.target.submit(); //submits form if validation is successful
-    }
-});
