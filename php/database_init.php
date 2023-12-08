@@ -32,9 +32,6 @@ try
         )";
         $conn -> exec($createTable);
     }
-    else {
-        echo "Table exists!";
-    }
 }
 catch(PDOException $e)
 {
