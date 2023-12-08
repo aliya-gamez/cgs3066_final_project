@@ -33,7 +33,16 @@ try
         )";
         $conn->exec($createTable);
     }
-    
+
+    // Deleting all files from ../recipes direcotry
+    $recipesDirHTML = "../recipes";
+    $recipesFiles = glob($recipesDirHTML.'/*');
+    foreach($recipesFiles as $recipeFile) {
+        if(is_file($recipeFile)) {
+            unlink($recipeFile);
+        }
+    }
+
     header("Location: ../index.html");
     exit();
 }
