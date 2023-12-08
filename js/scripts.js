@@ -207,6 +207,12 @@ function validateForm() {
         imageBox.style.border = "1px solid red";
         imageBox.style.backgroundColor = "#FFF2F2";
     }
+    else if(image.length > 1000) {
+        outputResult += "<p>Image URL cannot be more than 1000 characters.</p>";
+        validationIsSuccessful = false;
+        imageBox.style.border = "1px solid red";
+        imageBox.style.backgroundColor = "#FFF2F2";
+    }
     else {
         imageBox.style.border = "1px solid #ccc";
         imageBox.style.backgroundColor = "#fff";
