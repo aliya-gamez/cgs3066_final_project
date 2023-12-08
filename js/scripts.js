@@ -211,10 +211,7 @@ function validateForm() {
         imageBox.style.backgroundColor = "#fff";
     }
 
-    if(validationIsSuccessful) {
-
-    }
-    else if(!validationIsSuccessful) {
+    if(!validationIsSuccessful) {
         outputContainer.innerHTML = outputResult;
         //document.body.scrollTop = document.documentElement.scrollTop = 0;
     }
