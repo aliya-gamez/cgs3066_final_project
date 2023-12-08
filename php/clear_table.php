@@ -7,10 +7,17 @@ try
 {
     //Connect to the database.
     $conn = new PDO($dsn, $username, $password);
-
-    //Set an attribute on the database handle.
-    //The attribute ATTR_ERRMODE (for Error reporting mode of PDO) is set to a value of ERRMODE_EXCEPTION (for Throws PDOExceptions).
+    //Error handler ya
     $conn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    //Checks if Recipes exists then deletes it
+    $tableExists = "SHOW TABLES LIKE 'Recipes'";
+    $stmt = $conn->query($tableExists);
+    if ($stmt->rowCount() > 0) {
+        $deleteTable = "DROP TABLE Recipes";
+        $conn->exec($deleteTable);
+        echo "<h1>Table Recipes deleted successfully!</h1>";
+    }
     
     $createTable = "CREATE TABLE Recipes (
         recipe_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -22,7 +29,7 @@ try
         recipe_img VARCHAR(255)
     )";
 
-    //DELETES RECIPE TABLE
+    /*DELETES RECIPE TABLE
     $deleteTable = "DROP TABLE IF EXISTS Recipes";
     $conn -> exec($deleteTable);
     echo "<h1>Table Recipes deleted successfully!</h1>";//*/
