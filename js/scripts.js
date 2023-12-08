@@ -1,4 +1,13 @@
-//Creates database and populates it with some recipes
+//Initialize Database
+async function initDatabase() {
+    console.log("initDatabase() running...");
+    try {
+        let response = await fetch('php/database_init.php');
+    }
+    catch (e) {
+        console.log("Cant initialize database: ", e);
+    }
+}
 
 //Get recipes table data and input on front-end
 async function getRecipes() {
@@ -70,5 +79,6 @@ async function getRandomRecipe() {
 }
 
 //Event Listeners
+document.addEventListener("DOMContentLoaded",initDatabase);
 document.addEventListener("DOMContentLoaded",getRecipes);
 document.addEventListener("DOMContentLoaded",getRandomRecipe);

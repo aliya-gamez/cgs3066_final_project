@@ -16,32 +16,30 @@ try
     if ($stmt->rowCount() > 0) {
         $deleteTable = "DROP TABLE Recipes";
         $conn->exec($deleteTable);
-        echo "<h1>Table Recipes deleted successfully!</h1>";
     }
     
-    $createTable = "CREATE TABLE Recipes (
-        recipe_id INT AUTO_INCREMENT PRIMARY KEY,
-        recipe_title VARCHAR(255) NOT NULL,
-        recipe_description VARCHAR(255) NOT NULL,
-        recipe_ingredients JSON NOT NULL,
-        recipe_instructions JSON NOT NULL,
-        recipe_author VARCHAR(75),
-        recipe_img VARCHAR(255)
-    )";
-
-    /*DELETES RECIPE TABLE
-    $deleteTable = "DROP TABLE IF EXISTS Recipes";
-    $conn -> exec($deleteTable);
-    echo "<h1>Table Recipes deleted successfully!</h1>";//*/
-
-    //CREATES RECIPE TABLE
-    $conn -> exec($createTable);
+    //Checks if Recipes exists then if not, creates it
+    $tableExists = "SHOW TABLES LIKE 'Recipes'";
+    $stmt = $conn->query($tableExists);
+    if($stmt -> rowCount() === 0) {
+        $createTable = "CREATE TABLE Recipes (
+            recipe_id INT AUTO_INCREMENT PRIMARY KEY,
+            recipe_title VARCHAR(255) NOT NULL,
+            recipe_description VARCHAR(255) NOT NULL,
+            recipe_ingredients JSON NOT NULL,
+            recipe_instructions JSON NOT NULL,
+            recipe_author VARCHAR(75),
+            recipe_img VARCHAR(255)
+        )";
+        $conn->exec($createTable);
+    }
+    
     header("Location: ../index.html");
     exit();
 }
 catch(PDOException $e)
 {
-    echo "<h1>" . $e -> getMessage() . "</h1>";
+    echo $e;
 }
 
 $conn = null;

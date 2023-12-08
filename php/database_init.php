@@ -13,6 +13,10 @@ try
     $sql = "CREATE DATABASE IF NOT EXISTS foodfindsDB";
     $conn -> exec($sql);
 
+    //sets foodfindsDB as active database
+    $sql = "USE foodfindSDB";
+    $conn->exec($sql);
+
     //Checks if Recipes exists then if not, creates it
     $tableExists = "SHOW TABLES LIKE 'Recipes'";
     $stmt = $conn->query($tableExists);
