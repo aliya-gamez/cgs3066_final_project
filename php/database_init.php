@@ -30,7 +30,10 @@ try
             recipe_author VARCHAR(75),
             recipe_img VARCHAR(255)
         )";
-        conn -> exec($createTable);
+        $conn -> exec($createTable);
+    }
+    else {
+        echo "Table exists!";
     }
 }
 catch(PDOException $e)
