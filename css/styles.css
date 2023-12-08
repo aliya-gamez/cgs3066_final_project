@@ -318,6 +318,14 @@ footer p {
     background-color: #822a39;
  }
 
+.add-recipes #validation-output-container {
+    color: red;
+    font-weight: 400;
+}
+
+.add-recipes #validation-output-container p {
+    margin-bottom: 5px;
+}
 
 
 /* creamy_key_lime_pie.html */

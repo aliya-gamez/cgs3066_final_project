@@ -25,9 +25,6 @@
         <section class="add-recipes">
             <h1>Add Recipe</h1>
             <p><span class="required-star">*</span> = required input</p>
-            <div id="validation-output-container">
-
-            </div>
             <!--recipe_... ID(INT), TITLE(VARCHAR255), DESCRIPTION(VARCHAR255), INGREDIENTS(JSON), INSTRUCTIONS(JSON), AUTHOR(VARCHAR75), IMG(VARCHAR255)-->
             <form id="add-recipe-form" method="POST" action="php/add_recipe.php">
                 <div>
@@ -55,6 +52,7 @@
                     <input type="text" id="recipe_img" name="recipe_img" accept="image/*" required>
                 </div>
                 <div>
+                    <div id="validation-output-container"></div>
                     <input id="recipe_submit" type="submit" value="Add Recipe"></input>
                 </div>
             </form> 

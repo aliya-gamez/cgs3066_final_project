@@ -79,51 +79,136 @@ async function getRandomRecipe() {
 }
 
 function validateForm() {
+    //Get values from form
     let title = document.getElementById("recipe_title").value;
     let description = document.getElementById("recipe_description").value;
     let ingredients = document.getElementById("recipe_ingredients").value;
     let instructions = document.getElementById("recipe_instructions").value;
     let author = document.getElementById("recipe_author").value;
     let image = document.getElementById("recipe_img").value;
+    //Get input boxes from form
+    let titleBox = document.getElementById("recipe_title");
+    let descriptionBox = document.getElementById("recipe_description");
+    let ingredientsBox = document.getElementById("recipe_ingredients");
+    let instructionsBox = document.getElementById("recipe_instructions");
+    let authorBox = document.getElementById("recipe_author");
+    let imageBox = document.getElementById("recipe_img");
     let validationIsSuccessful = true;
 
     let outputResult = "";
     let outputContainer = document.getElementById("validation-output-container");
 
-    //Check if all fields are filled out
-    if (!title || !description || !ingredients || !instructions || !author || !image) {
-        outputResult += "<p>All fields must be filled out.</p><br>";
-        validationIsSuccessful = false;
-    }
-
     //Title Validation
-    if(title.length > 45) {
-        outputResult += "<p>Title cannot be more than 75 characters.</p><br>";
+    if(title === "") {
+        outputResult += "<p>Title cannot be empty.</p>";
         validationIsSuccessful = false;
+        titleBox.style.border = "1px solid red";
+        titleBox.style.backgroundColor = "#FFF2F2";
+    }
+    else if(title.length > 45) {
+        outputResult += "<p>Title cannot be more than 75 characters.</p>";
+        validationIsSuccessful = false;
+        titleBox.style.border = "1px solid red";
+        titleBox.style.backgroundColor = "#FFF2F2";
+    }
+    else {
+        titleBox.style.border = "1px solid #ccc";
+        titleBox.style.backgroundColor = "#fff";
     }
 
     //Description Validation
-    if(description.length > 255) {
-        outputResult += "<p>Description cannot be more than 255 characters.</p><br>";
+    if(description === "") {
+        outputResult += "<p>Description cannot be empty.</p>";
         validationIsSuccessful = false;
+        descriptionBox.style.border = "1px solid red";
+        descriptionBox.style.backgroundColor = "#FFF2F2";
+    }
+    else if(description.length > 255) {
+        outputResult += "<p>Description cannot be more than 255 characters.</p>";
+        validationIsSuccessful = false;
+        descriptionBox.style.border = "1px solid red";
+        descriptionBox.style.backgroundColor = "#FFF2F2";
+    }
+    else {
+        descriptionBox.style.border = "1px solid #ccc";
+        descriptionBox.style.backgroundColor = "#fff";
     }
 
     //Ingreidents & Instructions Validation
-    if (ingredients.includes("'") || ingredients.includes('"') || instructions.includes("'") || instructions.includes('"')) {
-        outputResult += "<p>Ingredients and/or instructions cannot contain single or double quotes.</p><br>";
+    if(ingredients === "") {
+        outputResult += "<p>Ingredients cannot be empty.</p>";
         validationIsSuccessful = false;
+        ingredientsBox.style.border = "1px solid red";
+        ingredientsBox.style.backgroundColor = "#FFF2F2";
+    }
+    else if (ingredients.includes("'") || ingredients.includes('"')) {
+        outputResult += "<p>Ingredients cannot contain single or double quotes.</p>";
+        validationIsSuccessful = false;
+        ingredientsBox.style.border = "1px solid red";
+        ingredientsBox.style.backgroundColor = "#FFF2F2";
+    }
+    else {
+        ingredientsBox.style.border = "1px solid #ccc";
+        ingredientsBox.style.backgroundColor = "#fff";
+    }
+
+    //Instructions Validation
+    if(instructions === "") {
+        outputResult += "<p>Instructions cannot be empty.</p>";
+        validationIsSuccessful = false;
+        instructionsBox.style.border = "1px solid red";
+        instructionsBox.style.backgroundColor = "#FFF2F2";
+    }
+    else if(instructions.includes("'") || instructions.includes('"')) {
+        outputResult += "<p>Instructions cannot contain single or double quotes.</p>";
+        validationIsSuccessful = false;
+        instructionsBox.style.border = "1px solid red";
+        instructionsBox.style.backgroundColor = "#FFF2F2";
+    } else {
+        instructionsBox.style.border = "1px solid #ccc";
+        instructionsBox.style.backgroundColor = "#fff";
     }
 
     //Author Validation
-    if(author.length > 45) {
-        outputResult += "<p>Author cannot be more than 45 characters.</p><br>";
+    if(author === "") {
+        outputResult += "<p>Author cannot be empty.</p>";
         validationIsSuccessful = false;
+        authorBox.style.border = "1px solid red";
+        authorBox.style.backgroundColor = "#FFF2F2";
+    }
+    else if(author.length > 45) {
+        outputResult += "<p>Author cannot be more than 45 characters.</p>";
+        validationIsSuccessful = false;
+        authorBox.style.border = "1px solid red";
+        authorBox.style.backgroundColor = "#FFF2F2";
+    }
+    else {
+        authorBox.style.border = "1px solid #ccc";
+        authorBox.style.backgroundColor = "#fff";
     }
 
     //Image URL Validation
-    if(!image.includes(".jpg") && !image.includes(".png") && !image.includes(".jpeg")) {
-        outputResult += "<p>Image URL must be a .jpg, .png, or .jpeg.</p><br>";
+    if(image === "") {
+        outputResult += "<p>Image URL cannot be empty.</p>";
         validationIsSuccessful = false;
+        imageBox.style.border = "1px solid red";
+        imageBox.style.backgroundColor = "#FFF2F2";
+    }
+    else if(!image.includes(".jpg") && !image.includes(".png") && !image.includes(".jpeg")) {
+        outputResult += "<p>Image URL must be a .jpg, .png, or .jpeg.</p>";
+        validationIsSuccessful = false;
+        imageBox.style.border = "1px solid red";
+        imageBox.style.backgroundColor = "#FFF2F2";
+    }
+    else if(!image.includes("https://") && !image.includes("http://")) {
+        outputResult += "<p>Image URL must contain https:// or http://.</p>";
+        validationIsSuccessful = false;
+        imageBox.style.border = "1px solid red";
+        imageBox.style.backgroundColor = "#FFF2F2";
+    }
+    else {
+        imageBox.style.border = "1px solid #ccc";
+        imageBox.style.backgroundColor = "#fff";
     }
 
     if(validationIsSuccessful) {
@@ -131,7 +216,7 @@ function validateForm() {
     }
     else if(!validationIsSuccessful) {
         outputContainer.innerHTML = outputResult;
-        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        //document.body.scrollTop = document.documentElement.scrollTop = 0;
     }
 }
 
