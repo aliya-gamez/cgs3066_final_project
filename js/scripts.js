@@ -78,7 +78,70 @@ async function getRandomRecipe() {
     }
 }
 
+function validateForm() {
+    let title = document.getElementById("recipe_title").value;
+    let description = document.getElementById("recipe_description").value;
+    let ingredients = document.getElementById("recipe_ingredients").value;
+    let instructions = document.getElementById("recipe_instructions").value;
+    let author = document.getElementById("recipe_author").value;
+    let image = document.getElementById("recipe_image").value;
+    let validationIsSuccessful = true;
+
+    let outputResult = "";
+    let outputContainer = document.getElementById("validation-output-container");
+
+    //Check if all fields are filled out
+    if (!title || !description || !ingredients || !instructions || !author || !image) {
+        outputResult += "<p>All fields must be filled out.</p><br>";
+        validationIsSuccessful = false;
+    }
+
+    //Title Validation
+    if(title.length > 45) {
+        outputResult += "<p>Title cannot be more than 75 characters.</p><br>";
+        validationIsSuccessful = false;
+    }
+
+    //Description Validation
+    if(description.length > 255) {
+        outputResult += "<p>Description cannot be more than 255 characters.</p><br>";
+        validationIsSuccessful = false;
+    }
+
+    //Ingreidents & Instructions Validation
+    if (ingredients.includes("'") || ingredients.includes('"') || instructions.includes("'") || instructions.includes('"')) {
+        outputResult += "<p>Ingredients and/or instructions cannot contain single or double quotes.</p><br>";
+        validationIsSuccessful = false;
+    }
+
+    //Author Validation
+    if(author.length > 45) {
+        outputResult += "<p>Author cannot be more than 45 characters.</p><br>";
+        validationIsSuccessful = false;
+    }
+
+    //Image URL Validation
+    if(!image.includes(".jpg") && !image.includes(".png") && !image.includes(".jpeg")) {
+        outputResult += "<p>Image URL must be a .jpg, .png, or .jpeg.</p><br>";
+        validationIsSuccessful = false;
+    }
+
+    if(validationIsSuccessful) {
+
+    }
+
+    outputContainer.innerHTML = outputResult;
+}
+
 //Event Listeners
-document.addEventListener("DOMContentLoaded",initDatabase);
-document.addEventListener("DOMContentLoaded",getRecipes);
-document.addEventListener("DOMContentLoaded",getRandomRecipe);
+document.addEventListener("DOMContentLoaded",initDatabase); //runs initDatabase() when DOM is loaded
+document.addEventListener("DOMContentLoaded",getRecipes); //runs getRecipes() when DOM is loaded
+document.addEventListener("DOMContentLoaded",getRandomRecipe); //runs getRandomRecipe() when DOM is loaded
+
+let addRecipeForm = document.getElementById("add-recipe-form");
+addRecipeForm.addEventListener("submit", function(event) { //runs validateForm() when form is submitted
+    event.preventDefault(); //prevents form from submitting
+    if(validateForm()) {
+        event.target.submit(); //submits form if validation is successful
+    }
+});

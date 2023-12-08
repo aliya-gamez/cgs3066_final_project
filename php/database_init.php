@@ -23,11 +23,11 @@ try
     if($stmt -> rowCount() === 0) {
         $createTable = "CREATE TABLE Recipes (
             recipe_id INT AUTO_INCREMENT PRIMARY KEY,
-            recipe_title VARCHAR(255) NOT NULL,
+            recipe_title VARCHAR(45) NOT NULL,
             recipe_description VARCHAR(255) NOT NULL,
             recipe_ingredients JSON NOT NULL,
             recipe_instructions JSON NOT NULL,
-            recipe_author VARCHAR(75),
+            recipe_author VARCHAR(45),
             recipe_img VARCHAR(255)
         )";
         $conn -> exec($createTable);
