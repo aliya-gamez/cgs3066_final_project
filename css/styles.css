@@ -158,8 +158,7 @@ header #logo img {
     transform: scale(1.05);
     color: var(--main-color);
     transition: all 250ms ease-in-out;
-    animation: shake 250ms;
-    transform: scale(1.03) rotate(0.25deg);
+    transform: scale(1.03);
 }
 
 
@@ -211,15 +210,8 @@ header #logo img {
 }
 
 .recipes .recipe-list .recipe:hover {
-    animation: shake 250ms;
-    transform: scale(1.03) rotate(0.25deg);
-}
-
-@keyframes shake {
-    0% { transform: scale(1.0) rotate(0deg);}
-    33% { transform: scale(1.01) rotate(0.25deg);}
-    66% { transform: scale(1.02) rotate(-0.25deg);}
-    100% { transform: scale(1.03) rotate(0.25deg);}
+    transition: all 250ms ease-in-out;
+    transform: scale(1.03);
 }
 
 .recipes .recipe-list .recipe-text {
