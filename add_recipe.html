@@ -29,11 +29,11 @@
             <form id="add-recipe-form" method="POST" action="php/add_recipe.php">
                 <div>
                     <label for="recipe_title">Recipe Name <span class="required-star">*</span></label>
-                    <input type="text" name="recipe_title" id="recipe_title" required>
+                    <input type="text" name="recipe_title" id="recipe_title" max="45"required>
                 </div>
                 <div>
                     <label for="recipe_description">Description <span class="required-star">*</span></label>
-                    <textarea name="recipe_description" id="recipe_description" rows="3" cols="50" required></textarea>
+                    <textarea name="recipe_description" id="recipe_description" max="255" rows="3" cols="50" required></textarea>
                 </div>
                 <div>
                     <label for="recipe_ingredients">Ingredients (one per line) <span class="required-star">*</span></label>
@@ -45,11 +45,11 @@
                 </div>
                 <div>
                     <label for="recipe_author">Author <span class="required-star">*</span></label>
-                    <input type="text" name="recipe_author" id="recipe_author" required>
+                    <input type="text" name="recipe_author" id="recipe_author" max="45" required>
                 </div>
                 <div>
                     <label for="recipe_img">Image URL <span class="required-star">*</span></label>
-                    <input type="text" id="recipe_img" name="recipe_img" accept="image/*" required>
+                    <input type="text" id="recipe_img" name="recipe_img" max="255" accept="image/*" required>
                 </div>
                 <div>
                     <div id="validation-output-container"></div>

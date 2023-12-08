@@ -196,7 +196,7 @@ function validateForm() {
         imageBox.style.backgroundColor = "#FFF2F2";
     }
     else if(!image.includes(".jpg") && !image.includes(".png") && !image.includes(".jpeg")) {
-        outputResult += "<p>Image URL must be a .jpg, .png, or .jpeg.</p>";
+        outputResult += "<p>Image URL must be a .jpg, .png, or .jpeg.a</p>";
         validationIsSuccessful = false;
         imageBox.style.border = "1px solid red";
         imageBox.style.backgroundColor = "#FFF2F2";
@@ -214,7 +214,6 @@ function validateForm() {
 
     if(!validationIsSuccessful) {
         outputContainer.innerHTML = outputResult;
-        //document.body.scrollTop = document.documentElement.scrollTop = 0;
     }
 }
 
