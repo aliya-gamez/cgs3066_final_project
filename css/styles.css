@@ -32,7 +32,6 @@ nav, section {
     margin-right: auto;
 }
 
-
 /*Header Styles */
 
 header {
@@ -368,4 +367,20 @@ footer p {
 
 .aboutus p {
     line-height: 1.5;
+}
+
+/*responsiveness?*/
+@media (max-width: 1200px) {
+    nav, section {
+        width: 90vw;
+    }
+}
+
+@media (max-width: 1000px) {
+    .recipes .recipe-list {
+        grid-template-columns: 45% 45%;
+    }
+    .view-recipe .recipe-details {
+        width: 85vw;
+    }
 }
