@@ -36,7 +36,7 @@ try
 
     // Deleting all files from ../recipes direcotry
     $recipesDirHTML = "../recipes";
-    $recipesFiles = glob($recipesDirHTML.'/*');
+    $recipesFiles = glob($recipesDirHTML.'/*.html');
     foreach($recipesFiles as $recipeFile) {
         if(is_file($recipeFile)) {
             unlink($recipeFile);
