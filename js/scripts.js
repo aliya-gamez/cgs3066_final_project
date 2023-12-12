@@ -30,15 +30,8 @@ async function getRecipes() {
                     <div class="recipe-text">
                         <h2 class="title">${recipe.recipe_title}</h2>
                         <p class="description">${recipe.recipe_description}</p>
-                        <p class="author">Author: ${recipe.recipe_author}</p>
                     </div>
                 </a>
-                <p>
-                    <form method="POST" action="php/delete_recipe.php">
-                        <input type="hidden" name="recipe_id" value="${recipe.recipe_id}">
-                        <input type="submit" value="Delete Recipe" id="delete-btn" name="delete-btn">
-                    </form>
-                </p>
                 `;
             recipeListStorage.appendChild(recipeCard);
         });
