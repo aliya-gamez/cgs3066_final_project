@@ -358,7 +358,26 @@ footer p {
     box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.26), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
-/*aboutus*/
+.view-recipe .delete-form input[type=submit] {
+    width: 250px;
+    color: white;
+    background-color: var(--main-color);
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+ }
+
+ .view-recipe .delete-form input[type=submit]:hover {
+    background-color: #822a39;
+ }
+
+/*aboutus*/ 
+.aboutus .content{
+    width: 55%;
+}
+
 .aboutus h2 {
     font-size: 1.2em;
     margin-top: 20px;
@@ -381,6 +400,9 @@ footer p {
         grid-template-columns: 45% 45%;
     }
     .view-recipe .recipe-details {
+        width: 85vw;
+    }
+    .aboutus .content {
         width: 85vw;
     }
 }

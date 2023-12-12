@@ -88,6 +88,14 @@ try {
                     <!-- Add more details as needed -->
                 </div>
                 </section>
+                <section class='view-recipe'>
+                    <p>
+                        <form class='delete-form' method='POST' action='../php/delete_recipe.php'>
+                            <input type='hidden' name='recipe_id' value='$recipeId'>
+                            <input type='submit' value='Delete Recipe' id='delete-btn' name='delete-btn'>
+                        </form>
+                    </p>
+                </section>
             </main>
             <footer>
                 <p>&copy; 2023 - $author </p>
