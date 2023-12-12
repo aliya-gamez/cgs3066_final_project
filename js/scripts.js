@@ -33,10 +33,10 @@ async function getRecipes() {
                         <p class="author">Author: ${recipe.recipe_author}</p>
                     </div>
                 </a>
-                <p>
-                    <form method="POST" action="php/delete_recipe.php">
+                <p style="text-align: center;"> 
+                    <form method="POST" action="php/delete_recipe.php" style="display: flex; justify-content: center;">
                         <input type="hidden" name="recipe_id" value="${recipe.recipe_id}">
-                        <input type="submit" value="Delete Recipe" id="delete-btn" name="delete-btn">
+                        <input type="submit" value="Delete Recipe" class="delete-button" style="background-color: #C35769; color: #fff; padding: 8px 16px; border: none; cursor: pointer; border-radius: 4px;">
                     </form>
                 </p>
                 `;
