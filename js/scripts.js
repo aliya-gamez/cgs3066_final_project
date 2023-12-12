@@ -30,8 +30,12 @@ async function getRecipes() {
                     <div class="recipe-text">
                         <h2 class="title">${recipe.recipe_title}</h2>
                         <p class="description">${recipe.recipe_description}</p>
+                        <p class="author">Author: ${recipe.recipe_author}</p>
                     </div>
                 </a>
+                <p>
+                    <button class="delete-button" onclick="deleteRecipe('${recipe.recipe_id}')">Delete</button>
+                </p>
                 `;
             recipeListStorage.appendChild(recipeCard);
         });
@@ -41,6 +45,8 @@ async function getRecipes() {
         console.log("Couldn't get recipes: ", error);
     }
 }
+
+
 
 //Get random recipe from table data and input on front-end hero banner
 async function getRandomRecipe() {
@@ -226,6 +232,37 @@ function validateForm() {
         return true;
     }
 }
+
+async function deleteRecipe(recipeId) {
+
+    console.log("Deleting recipe with ID: ", recipeId);
+
+    try {
+        let response = await fetch('../php/clear_table.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ recipeId: recipeId }),
+        });
+
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+       
+        let data = await response.text();
+        console.log(data);
+
+        //Refreshes the webpage.
+        getRecipes();
+    } catch (error) {
+        console.error('Fetch error:', error);
+    }
+}
+
+
 
 //Event Listeners
 document.addEventListener("DOMContentLoaded",initDatabase); //runs initDatabase() when DOM is loaded
