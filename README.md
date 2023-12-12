@@ -1,22 +1,13 @@
 # CGS3066 Final Project: Recipe Sharing Website
 
-**Members:** Aliya Gamez, Joseph Galego, Matthew Gonzales
-HTML, CSS, JavaScript, PHP and MySQL.
+**Members:** Aliya Gamez, Matthew Gonzales
 
 **URL:** [Github Pages Link](https://aliya-gamez.github.io/cgs3066_final_project/) (Only for HTML, CSS and JS functionality)
 
-**Description:**
+**Description:** Project utilizing HTML, CSS, JavaScript, PHP and MySQL.
 
 
 ## Project Info
-
-**To-do:**
-- Form Validation for add_recipe.html
-    - JavaScript form validation done!
-    - Possible PHP form validation?
-- Add delete button to delete indivdual recipes in the recipes page of each recipe
-    - Need to make a delete_recipe.php file that drops requested recipe from table
-    - JavaScript function that when called on specific recipe page, calls delete_recipe.php (maybe async fetch func)
 
 **MySQL Database Structure/Table:**
 
