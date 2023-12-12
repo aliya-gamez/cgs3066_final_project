@@ -27,8 +27,8 @@ try
             recipe_description VARCHAR(255) NOT NULL,
             recipe_ingredients JSON NOT NULL,
             recipe_instructions JSON NOT NULL,
-            recipe_author VARCHAR(45),
-            recipe_img VARCHAR(1000)
+            recipe_author VARCHAR(45) NOT NULL,
+            recipe_img VARCHAR(1000) NOT NULL
         )";
         $conn -> exec($createTable);
     }
