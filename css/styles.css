@@ -373,7 +373,11 @@ footer p {
     background-color: #822a39;
  }
 
-/*aboutus*/
+/*aboutus*/ 
+.aboutus .content{
+    width: 55%;
+}
+
 .aboutus h2 {
     font-size: 1.2em;
     margin-top: 20px;
@@ -396,6 +400,9 @@ footer p {
         grid-template-columns: 45% 45%;
     }
     .view-recipe .recipe-details {
+        width: 85vw;
+    }
+    .aboutus .content {
         width: 85vw;
     }
 }
