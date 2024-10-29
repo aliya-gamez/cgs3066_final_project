@@ -2,7 +2,7 @@
 
 **Members:** Aliya Gamez, Matthew Gonzales
 
-**URL:** [Github Pages Link](https://aliya-gamez.github.io/cgs3066_final_project/) (Only for HTML, CSS and JS functionality)
+**URL:** [Github Pages Link](https://aliya-gamez.github.io/recipe-sharing-project/) (Only for HTML, CSS and JS functionality)
 
 **Description:** Project utilizing HTML, CSS, JavaScript, PHP and MySQL.
 
